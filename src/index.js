@@ -10,6 +10,7 @@ const PAGETEMPLATE_DESCRIPTOR_SCHEMA_PATH = 'src/schemas/pagetemplate-descriptor
 const PAGE_DESCRIPTOR_SCHEMA_PATH = 'src/schemas/page-descriptor-schema.yaml'
 const CMSASSET_DESCRIPTOR_SCHEMA_PATH = 'src/schemas/cmsasset-descriptor-schema.yaml'
 const CONTENTTEMPLATE_DESCRIPTOR_SCHEMA_PATH = 'src/schemas/contenttemplate-descriptor-schema.yaml'
+const CONTENTTYPE_DESCRIPTOR_SCHEMA_PATH = 'src/schemas/contenttype-descriptor-schema.yaml'
 
 const _addPath = func => {
   return path => {
@@ -62,6 +63,9 @@ const _validateContenttemplateDescriptorFile = fileContent =>
     return noConfigPath && noMessageConfig && noMessage
   })
 
+const _validateContenttypeDescriptorFile = fileContent =>
+  _validateSchema(fileContent, CONTENTTYPE_DESCRIPTOR_SCHEMA_PATH)
+
 
 module.exports.validateBundleDescriptorFile = _addPath(_validateBundleDescriptorFile)
 module.exports.validatePluginDescriptorFile = _addPath(_validatePluginDescriptorFile)
@@ -71,6 +75,7 @@ module.exports.validatePagetemplateDescriptorFile = _addPath(_validatePageTempla
 module.exports.validatePageDescriptorFile = _addPath(_validatePageDescriptorFile)
 module.exports.validateCmsassetDescriptorFile = _addPath(_validateCmsassetDescriptorFile)
 module.exports.validateContenttemplateDescriptorFile = _addPath(_validateContenttemplateDescriptorFile)
+module.exports.validateContenttypeDescriptorFile = _addPath(_validateContenttypeDescriptorFile)
 
 
 

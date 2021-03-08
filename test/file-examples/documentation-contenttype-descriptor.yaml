@@ -1,0 +1,48 @@
+code: CNG
+name: Demo
+status: 0
+
+attributes:
+    - code: title
+      type: Text
+      name: Title
+      roles:
+          - code: jacms:title
+            descr: The main title of a Content
+      disablingCodes: []
+      mandatory: true
+      listFilter: false
+      indexable: false
+
+      enumeratorStaticItems: string
+      enumeratorStaticItemsSeparator: string
+      enumeratorExtractorBean: string
+
+      validationRules:
+          minLength: 0
+          maxLength: 100
+          regex: string
+          rangeStartString: string
+          rangeEndString: string
+          rangeStartStringAttribute: string
+          rangeEndStringAttribute: string
+          equalString: string
+          equalStringAttribute: string
+          rangeStartDate: string
+          rangeEndDate: string
+          rangeStartDateAttribute: string
+          rangeEndDateAttribute: string
+          equalDate: string
+          equalDateAttribute: string
+          rangeStartNumber: 0
+          rangeStartNumberAttribute: string
+          rangeEndNumber: 0
+          rangeEndNumberAttribute: string
+          equalNumber: 0
+          equalNumberAttribute:
+          ognlValidation:
+              applyOnlyToFilledAttr: false
+              errorMessage: Something
+              keyForErrorMessage: some
+              keyForHelpMessage: thing
+              ognlExpression: string

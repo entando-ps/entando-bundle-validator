@@ -1,0 +1,93 @@
+code:
+    required: true
+    length:
+        min: 3
+        max: 3
+name:
+    required: true
+status:
+    required: true
+    type: number
+
+attributes:
+    - code:
+        required: true
+      type:
+        required: true
+      name:
+        required: true
+      roles:
+          - code:
+                required: true
+            descr:
+                required: true
+      disablingCodes:
+          - type: string
+      mandatory:
+          type: boolean
+      listFilter:
+          type: boolean
+      indexable:
+          type: boolean
+      enumeratorStaticItems:
+          required: false
+      enumeratorStaticItemsSeparator:
+          required: false
+      enumeratorExtractorBean:
+          required: false
+
+      validationRules:
+          minLength:
+              required: false
+          maxLength:
+              required: false
+          regex:
+              required: false
+          rangeStartString:
+              required: false
+          rangeEndString:
+              required: false
+          rangeStartStringAttribute:
+              required: false
+          rangeEndStringAttribute:
+              required: false
+          equalString:
+              required: false
+          equalStringAttribute:
+              required: false
+          rangeStartDate:
+              required: false
+          rangeEndDate:
+              required: false
+          rangeStartDateAttribute:
+              required: false
+          rangeEndDateAttribute:
+              required: false
+          equalDate:
+              required: false
+          equalDateAttribute:
+              required: false
+          rangeStartNumber:
+              required: false
+          rangeStartNumberAttribute:
+              required: false
+          rangeEndNumber:
+              required: false
+          rangeEndNumberAttribute:
+              required: false
+          equalNumber:
+              required: false
+          equalNumberAttribute:
+              required: false
+          ognlValidation:
+              required: false
+              applyOnlyToFilledAttr:
+                  type: boolean
+              errorMessage:
+                  type: string
+              keyForErrorMessage:
+                  type: string
+              keyForHelpMessage:
+                  type: string
+              ognlExpression:
+                  type: string
