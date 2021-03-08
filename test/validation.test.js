@@ -8,6 +8,7 @@ const {
   validateCmsassetDescriptorFile,
   validateContenttemplateDescriptorFile,
   validateContenttypeDescriptorFile,
+  validateContentDescriptorFile
 } = require('../src/index')
 test('check documentation-bundle-descriptor.yaml', () => {
   const {path, errors} = validateBundleDescriptorFile('test/file-examples/documentation-bundle-descriptor.yaml');
@@ -63,5 +64,10 @@ test('check documentation-contenttemplate-descriptor.yaml', () => {
 test('check documentation-contenttype-descriptor.yaml', () => {
   const {path, errors} = validateContenttypeDescriptorFile('test/file-examples/documentation-contenttype-descriptor.yaml');
   expect(path).toBe('test/file-examples/documentation-contenttype-descriptor.yaml')
+  expect(errors).toHaveLength(0)
+})
+test('check documentation-content-descriptor.yaml', () => {
+  const {path, errors} = validateContentDescriptorFile('test/file-examples/documentation-content-descriptor.yaml');
+  expect(path).toBe('test/file-examples/documentation-content-descriptor.yaml')
   expect(errors).toHaveLength(0)
 })

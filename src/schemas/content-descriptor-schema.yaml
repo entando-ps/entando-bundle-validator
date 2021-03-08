@@ -1,0 +1,18 @@
+id:
+    required: true
+typeCode:
+    required: true
+    length:
+        min: 3
+        max: 3
+description:
+    required: true
+mainGroup:
+    required: true
+status:
+    required: true
+attributes:
+    - code:
+        required: true
+      values:
+        required: false
