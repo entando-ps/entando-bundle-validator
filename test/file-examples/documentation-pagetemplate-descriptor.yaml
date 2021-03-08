@@ -1,0 +1,45 @@
+code: todomvc_page_template # The Page Template identification
+description: TODO MVC basic page template # The Page Template description
+
+titles: # Page Template's Titles
+    en: TODO MVC PageTemplate # Title in English
+    it: TODO MVC PageTemplate # Title in Italian
+
+# The Page Template configuration
+configuration:
+    frames: # All frames
+        - pos: 0 # Frame position
+          description: Header # Frame description
+          sketch: # Frame sketch configuration
+              x1: 0
+              y1: 0
+              x2: 11
+              y2: 0
+          defaultWidget:
+              code: my-widget # the code of the widget to apply when using the button "apply default widgets" in the page configuration UI
+
+        # A simplified way to define a Frame
+        - pos: 1
+          description: Breadcrumb
+          sketch: { x1: 0, y1: 1, x2: 11, y2: 1 }
+
+# Optional. Define the Page Template in a separate file or inside the descriptor file with `template`
+templatePath: page.ftl
+
+# Optional. Define the Page Template this way or in a separate file with `templatePath`
+template: >-
+    <#assign wp=JspTaglibs[\"/aps-core\"]>
+    <!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\">
+    <html>
+        <head>
+            <title><@wp.currentPage param=\"title\" /></title>
+        </head>
+        <body>
+            <h1><@wp.currentPage param=\"title\" /></h1>
+            <a href=\"<@wp.url page=\"homepage\"/>\">Home</a><br>
+            <div>
+                <h1>Bundle 1 Page Template</h1>
+                <@wp.show frame=0 />
+            </div>
+        </body>
+    </html>

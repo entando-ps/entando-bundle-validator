@@ -1,0 +1,8 @@
+code: my_fragment # The unique id
+
+# Optional. The fragment content
+guiCode: >-
+    "<div>Here the content</div>"
+
+# Optional. A path to a FreeMarker file containing the fragment content.
+guiCodePath: fragment.ftl

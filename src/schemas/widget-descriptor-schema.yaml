@@ -1,0 +1,26 @@
+code:
+    required: true
+    type: string
+
+titles:
+    en:
+        type: string
+        required: true
+    it:
+        type: string
+        required: true
+group:
+    required: true
+    type: string
+
+customUiPath:
+    type: string
+
+customUi:
+    type: string
+
+configUi:
+    customElement:
+        type: string
+    resources:
+        -   type: string

@@ -1,0 +1,18 @@
+image: "entando/my-image:1.0.0" # The docker image used to create the plugin
+deploymentBaseName: "myplugin" # The base name to assign to the pods that have to be created in Kubernetes
+dbms: "postgresql" # The DBMS the plugin will use
+roles: # The roles the plugin will expose in keycloak
+    - "task-list"
+    - "task-get"
+    - "connection-list"
+    - "connection-get"
+    - "connection-create"
+    - "connection-delete"
+    - "connection-edit"
+healthCheckPath: "/actuator/health" # The health check path that kubernetes will use to check status of the plugin deployment
+ingressPath: "/myhostname.io/entando-plugin" # the ingress path to assign to the plugin deployment
+permissions: # a list of keycloak clientId / role to bind each to the other
+    - clientId: realm-management
+      role: manage-users
+    - clientId: realm-management
+      role: view-users

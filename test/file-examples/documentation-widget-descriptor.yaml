@@ -1,0 +1,20 @@
+code: another_todomvc_widget # The Widget identification
+
+titles: # Widget's Titles
+    en: TODO MVC Widget # Title in English
+    it: TODO MVC Widget # Title in Italian
+
+group: free # The owner group of the widget
+
+# Optional. The UI Path, the widget.ftl file will have the customUi content
+customUiPath: widget.ftl
+
+# Optional. The Custom UI
+customUi: >-
+    <h1>My custom widget UI</h1>
+
+# Optional. ConfigUI
+configUi:
+    customElement: todomvc-config # The name of the custom-element used to render the configUI
+    resources:
+        - <bundleid>/static/js/main.js # The resources necessary to the custom element to render the configUI, like the code

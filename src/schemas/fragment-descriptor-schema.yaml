@@ -1,0 +1,8 @@
+code:
+    required: true
+
+guiCode:
+    type: string
+
+guiCodePath:
+    type: string

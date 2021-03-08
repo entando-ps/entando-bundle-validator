@@ -1,0 +1,63 @@
+code: survey_bundle # The bundle ID
+description: This is the survey bundle # The description of the bundle
+
+components: # All components will be here
+
+    # Optional. Use if the component requires a deployment
+    plugins:
+        - folder/you/want/my_plugin_descriptor.yaml
+        - folder/you/want/another_plugin_descriptor.yaml
+
+    # To create widgets you will need to add references to the descriptor file's
+    widgets:
+        - widgets/my_widget_descriptor.yaml
+        - widgets/another_widget_descriptor.yaml
+
+    # To create fragments, you will need to add references to the descriptor file's
+    fragments:
+        - fragments/my_fragment.yaml
+
+    # To create Page Templates you will need to add references to the descriptor file's
+    pageModels:
+        - pageModels/my_page_model_descriptor.yaml
+        - pageModels/another_page_model_descriptor.yaml
+
+    # To create and publish pages you will need to add references to the descriptor file's
+    page:
+        - page/my_page_descriptor.yaml
+        - page/another_page_descriptor.yaml
+
+    # To create a CMS Asset you will need to add a reference to the descriptor file and put on the same location the image or file you want to upload.
+    assets:
+        - assets/my-asset/my_asset_descriptor.yaml
+        - assets/my-asset/my_image.jpg
+
+    # To create Content Types you will need to add references to the descriptor file's
+    contentTypes:
+        - contentTypes/my_content_type_descriptor.yaml
+
+    # To create Content Templates you will need to add references to the descriptor file's
+    contentModels:
+        - contentModels/my_content_model_descriptor.yaml
+        - contentModels/another_content_model_descriptor.yaml
+
+    # To create and publish Contents you will need to add references to the descriptor file's
+    contents:
+        - contents/my_content_descriptor.yaml
+        - contents/another_content_descriptor.yaml
+
+    # To create categories you will need to add references to the descriptor file's
+    categories:
+        - categories/my_categories.yaml
+
+    # To create groups you will need to add references to the descriptor file's
+    groups:
+        - groups/my_groups.yaml
+
+    # To create labels you will need to add references to the descriptor file's
+    labels:
+        - labels/my_labels.yaml
+
+    # To enable labels you will need to add references to the descriptor file's
+    languages:
+        - languages/languages.yaml

@@ -1,0 +1,40 @@
+code:
+    required: true
+description:
+    required: true
+titles:
+    en:
+        type: string
+        required: true
+    it:
+        type: string
+        required: true
+configuration:
+    required: true
+    frames:
+        - pos:
+            required: true
+          description:
+            required: true
+          sketch:
+            required: true
+            x1:
+                type: number
+            y1:
+                required: true
+                type: number
+            x2:
+                required: true
+                type: number
+            y2:
+                required: true
+                type: number
+          defaultWidget:
+              code:
+                  type: string
+
+templatePath:
+    type: string
+template:
+    type: string
+

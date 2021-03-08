@@ -1,0 +1,37 @@
+code:
+    required: true
+parentCode:
+    required: true
+titles:
+    en:
+        type: string
+        required: true
+    it:
+        type: string
+        required: true
+pageModel:
+    required: true
+ownerGroup:
+    required: true
+joinGroups:
+    - type: string
+displayedInMenu:
+    type: boolean
+seo:
+    type: boolean
+charset:
+    type: string
+status:
+    type: string
+    required: false
+    enum:
+        - published
+        - draft
+widgets:
+    - code:
+        type: string
+      pos:
+        type: number
+      config:
+          required: false
+

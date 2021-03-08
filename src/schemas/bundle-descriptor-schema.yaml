@@ -1,0 +1,45 @@
+code:
+    type: string
+    required: true
+description:
+    type: string
+
+components:
+    required: true
+    plugins:
+        - type: string
+    widgets:
+        - type: string
+
+    fragments:
+        - type: string
+
+    pageModels:
+        - type: string
+
+    page:
+        - type: string
+
+    assets:
+        - type: string
+
+    contentTypes:
+        - type: string
+
+    contentModels:
+        - type: string
+
+    contents:
+        - type: string
+
+    categories:
+        - type: string
+
+    groups:
+        - type: string
+
+    labels:
+        - type: string
+
+    languages:
+        - type: string

@@ -1,0 +1,23 @@
+image:
+    type: string
+    required: true
+deploymentBaseName:
+    type: string
+dbms:
+    type: string
+    required: true
+    enum:
+        - postgresql
+        - none
+roles:
+    - type: string
+healthCheckPath:
+    type: string
+    required: true
+ingressPath:
+    type: string
+permissions:
+    - clientId:
+        type: string
+      role:
+        type: string

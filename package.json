@@ -1,0 +1,19 @@
+{
+  "name": "entando-bundle-validator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Germano Giudici",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "js-yaml": "^4.0.0",
+    "yaml-schema-validator": "^1.2.2"
+  }
+}
