@@ -37,6 +37,11 @@ test('check documentation-fragment-descriptor.yaml', () => {
   expect(errors).toHaveLength(0)
 })
 
+test('check documentation-pagetemplate-descriptor.yaml', () => {
+  const {path, errors} = validatePagetemplateDescriptorFile('test/file-examples/documentation-pagetemplate-descriptor.yaml');
+  expect(path).toBe('test/file-examples/documentation-pagetemplate-descriptor.yaml')
+  expect(errors).toHaveLength(0)
+})
 test('check documentation-page-descriptor.yaml', () => {
   const {path, errors} = validatePageDescriptorFile('test/file-examples/documentation-page-descriptor.yaml');
   expect(path).toBe('test/file-examples/documentation-page-descriptor.yaml')
