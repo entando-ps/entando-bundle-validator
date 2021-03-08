@@ -1,0 +1,44 @@
+id: 8880003
+contentType: CNG
+description: Demo Content Template
+
+# Optional. Define the Content Template Shape in a separate file or inside descriptor file with `contentShape`
+contentShapePath:
+
+# Optional. Define the Content Template Shape this way or in a separate file with `contentShapePath`
+contentShape: >-
+    <article>
+      <h1>$content.Title.text</h1>
+      <h2>Demo content template</h2>
+      #if ( $content.MainBody.text != "" )
+      $content.MainBody.text
+      #end
+    </article>
+
+
+widgets:
+    - code: Brand-Logo
+      config: null
+      pos: 0
+    - code: Login_buttons
+      config: null
+      pos: 2
+    - code: seeds_card
+      config:
+          cardname: creditcard
+      pos: 6
+    - code: list_item
+      config:
+          icon: managealerts
+          count: '0'
+          title: Alerts
+      pos: 7
+    - code: list_item
+      config:
+          icon: viewstatements
+          count: '0'
+          title: View Statements
+      pos: 11
+    - code: seedscard-transaction-table
+      config: null
+      pos: 13

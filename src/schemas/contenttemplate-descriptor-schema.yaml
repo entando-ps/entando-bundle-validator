@@ -1,0 +1,27 @@
+id:
+    required: true
+    type: number
+contentType:
+    required: true
+    length:
+        min: 3
+        max: 3
+description:
+    required: true
+
+# Optional. Define the Content Template Shape in a separate file or inside descriptor file with `contentShape`
+contentShapePath:
+    required: false
+# Optional. Define the Content Template Shape this way or in a separate file with `contentShapePath`
+contentShape:
+    required: false
+
+widgets:
+    - code:
+          type: string
+      pos:
+          type: number
+      config:
+          required: false
+
+
