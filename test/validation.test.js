@@ -4,7 +4,8 @@ const {
   validateWidgetDescriptorFile,
   validateFragmentDescriptorFile,
   validatePagetemplateDescriptorFile,
-  validatePageDescriptorFile
+  validatePageDescriptorFile,
+  validateCmsAssetDescriptorFile
 } = require('../src/index')
 
 test('check documentation-bundle-descriptor.yaml', () => {
@@ -45,5 +46,10 @@ test('check documentation-pagetemplate-descriptor.yaml', () => {
 test('check documentation-page-descriptor.yaml', () => {
   const {path, errors} = validatePageDescriptorFile('test/file-examples/documentation-page-descriptor.yaml');
   expect(path).toBe('test/file-examples/documentation-page-descriptor.yaml')
+  expect(errors).toHaveLength(0)
+})
+test('check documentation-cmsasset-descriptor.yaml', () => {
+  const {path, errors} = validateCmsAssetDescriptorFile('test/file-examples/documentation-cmsasset-descriptor.yaml');
+  expect(path).toBe('test/file-examples/documentation-cmsasset-descriptor.yaml')
   expect(errors).toHaveLength(0)
 })

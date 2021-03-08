@@ -8,6 +8,7 @@ const WIDGET_DESCRIPTOR_SCHEMA_PATH = 'src/schemas/widget-descriptor-schema.yaml
 const FRAGMENT_DESCRIPTOR_SCHEMA_PATH = 'src/schemas/fragment-descriptor-schema.yaml'
 const PAGETEMPLATE_DESCRIPTOR_SCHEMA_PATH = 'src/schemas/pagetemplate-descriptor-schema.yaml'
 const PAGE_DESCRIPTOR_SCHEMA_PATH = 'src/schemas/page-descriptor-schema.yaml'
+const CMSASSET_DESCRIPTOR_SCHEMA_PATH = 'src/schemas/cmsasset-descriptor-schema.yaml'
 
 const _addPath = func => {
   return path => {
@@ -48,6 +49,9 @@ const _validatePageDescriptorFile = fileContent =>
     }
   )
 
+const _validateCmsassetDescriptorFile = fileContent =>
+  _validateSchema(fileContent, CMSASSET_DESCRIPTOR_SCHEMA_PATH)
+
 
 module.exports.validateBundleDescriptorFile = _addPath(_validateBundleDescriptorFile)
 module.exports.validatePluginDescriptorFile = _addPath(_validatePluginDescriptorFile)
@@ -55,6 +59,7 @@ module.exports.validateWidgetDescriptorFile = _addPath(_validateWidgetDescriptor
 module.exports.validateFragmentDescriptorFile = _addPath(_validateFragmentDescriptorFile)
 module.exports.validatePagetemplateDescriptorFile = _addPath(_validatePageTemplateDescriptorFile)
 module.exports.validatePageDescriptorFile = _addPath(_validatePageDescriptorFile)
+module.exports.validateCmsAssetDescriptorFile = _addPath(_validateCmsassetDescriptorFile)
 
 
 

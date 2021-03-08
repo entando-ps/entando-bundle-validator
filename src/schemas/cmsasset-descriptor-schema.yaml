@@ -1,0 +1,12 @@
+correlationCode:
+    required: true
+type:
+    required: true
+name:
+    required: true
+description:
+    required: true
+group:
+    required: true
+categories:
+    - type: string
