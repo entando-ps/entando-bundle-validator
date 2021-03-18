@@ -1,0 +1,10 @@
+- code:
+        required: true
+  parentCode:
+        required: true
+  titles:
+        required: true
+        it:
+            required: true
+        en:
+            required: true

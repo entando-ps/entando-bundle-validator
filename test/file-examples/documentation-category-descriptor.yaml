@@ -1,0 +1,5 @@
+- code: new-category # Identifies the category
+  parentCode: home # The parent category, home is the base category
+  titles:
+      it: "Una nuova categoria" # Category name in Italian
+      en: "New category" # Category name in English
