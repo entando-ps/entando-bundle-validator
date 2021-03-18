@@ -1,0 +1,4 @@
+- key: MY-FIRST-LABEL # Identifies the label
+  titles: # The titles on the label
+    it: Mio Titolo # The title in Italian
+    en: My Title # The title in English

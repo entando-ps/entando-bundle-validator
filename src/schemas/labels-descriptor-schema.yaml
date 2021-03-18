@@ -1,0 +1,9 @@
+- key:
+    required: true
+  titles:
+    required: true
+    it:
+      required: true
+    en:
+      required: true
+

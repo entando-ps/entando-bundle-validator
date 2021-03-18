@@ -14,6 +14,7 @@ const CONTENTTYPE_DESCRIPTOR_SCHEMA_PATH = 'src/schemas/contenttype-descriptor-s
 const CONTENT_DESCRIPTOR_SCHEMA_PATH = 'src/schemas/content-descriptor-schema.yaml'
 const CATEGORIES_DESCRIPTOR_SCHEMA_PATH = 'src/schemas/categories-descriptor-schema.yaml'
 const GROUPS_DESCRIPTOR_SCHEMA_PATH = 'src/schemas/groups-descriptor-schema.yaml'
+const LABELS_DESCRIPTOR_SCHEMA_PATH = 'src/schemas/labels-descriptor-schema.yaml'
 
 const _addPath = func => {
   return path => {
@@ -90,6 +91,9 @@ const _validateCategoriesDescriptorFile = fileContent =>
 const _validateGroupsDescriptorFile = fileContent =>
   _validateSchema(fileContent, GROUPS_DESCRIPTOR_SCHEMA_PATH)
 
+const _validateLabelsDescriptorFile = fileContent =>
+  _validateSchema(fileContent, LABELS_DESCRIPTOR_SCHEMA_PATH)
+
 module.exports.validateBundleDescriptorFile = _addPath(_validateBundleDescriptorFile)
 module.exports.validatePluginDescriptorFile = _addPath(_validatePluginDescriptorFile)
 module.exports.validateWidgetDescriptorFile = _addPath(_validateWidgetDescriptorFile)
@@ -102,6 +106,7 @@ module.exports.validateContenttypeDescriptorFile = _addPath(_validateContenttype
 module.exports.validateContentDescriptorFile = _addPath(_validateContentDescriptorFile)
 module.exports.validateCategoriesDescriptorFile = _addPath(_validateCategoriesDescriptorFile)
 module.exports.validateGroupsDescriptorFile = _addPath(_validateGroupsDescriptorFile)
+module.exports.validateLabelsDescriptorFile = _addPath(_validateLabelsDescriptorFile)
 
 
 
