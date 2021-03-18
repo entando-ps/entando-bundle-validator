@@ -9,7 +9,8 @@ const {
   validateContenttemplateDescriptorFile,
   validateContenttypeDescriptorFile,
   validateContentDescriptorFile,
-  validateCategoryDescriptorFile
+  validateCategoriesDescriptorFile,
+  validateGroupsDescriptorFile,
 } = require('../src/index')
 test('check documentation-bundle-descriptor.yaml', () => {
   const {path, errors} = validateBundleDescriptorFile('test/file-examples/documentation-bundle-descriptor.yaml');
@@ -72,8 +73,13 @@ test('check documentation-content-descriptor.yaml', () => {
   expect(path).toBe('test/file-examples/documentation-content-descriptor.yaml')
   expect(errors).toHaveLength(0)
 })
-test('check documentation-category-descriptor.yaml', () => {
-  const {path, errors} = validateCategoryDescriptorFile('test/file-examples/documentation-category-descriptor.yaml');
-  expect(path).toBe('test/file-examples/documentation-category-descriptor.yaml')
+test('check documentation-categories-descriptor.yaml', () => {
+  const {path, errors} = validateCategoriesDescriptorFile('test/file-examples/documentation-categories-descriptor.yaml');
+  expect(path).toBe('test/file-examples/documentation-categories-descriptor.yaml')
+  expect(errors).toHaveLength(0)
+})
+test('check documentation-groups-descriptor.yaml', () => {
+  const {path, errors} = validateGroupsDescriptorFile('test/file-examples/documentation-groups-descriptor.yaml');
+  expect(path).toBe('test/file-examples/documentation-groups-descriptor.yaml')
   expect(errors).toHaveLength(0)
 })

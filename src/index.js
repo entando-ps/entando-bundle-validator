@@ -12,7 +12,8 @@ const CMSASSET_DESCRIPTOR_SCHEMA_PATH = 'src/schemas/cmsasset-descriptor-schema.
 const CONTENTTEMPLATE_DESCRIPTOR_SCHEMA_PATH = 'src/schemas/contenttemplate-descriptor-schema.yaml'
 const CONTENTTYPE_DESCRIPTOR_SCHEMA_PATH = 'src/schemas/contenttype-descriptor-schema.yaml'
 const CONTENT_DESCRIPTOR_SCHEMA_PATH = 'src/schemas/content-descriptor-schema.yaml'
-const CATEGORY_DESCRIPTOR_SCHEMA_PATH = 'src/schemas/category-descriptor-schema.yaml'
+const CATEGORIES_DESCRIPTOR_SCHEMA_PATH = 'src/schemas/categories-descriptor-schema.yaml'
+const GROUPS_DESCRIPTOR_SCHEMA_PATH = 'src/schemas/groups-descriptor-schema.yaml'
 
 const _addPath = func => {
   return path => {
@@ -83,8 +84,11 @@ const _validateContentDescriptorFile = fileContent =>
     return noElementsPath && noMessageElements && noIsNotPresentMessage
   })
 
-const _validateCategoryDescriptorFile = fileContent =>
-  _validateSchema(fileContent, CATEGORY_DESCRIPTOR_SCHEMA_PATH)
+const _validateCategoriesDescriptorFile = fileContent =>
+  _validateSchema(fileContent, CATEGORIES_DESCRIPTOR_SCHEMA_PATH)
+
+const _validateGroupsDescriptorFile = fileContent =>
+  _validateSchema(fileContent, GROUPS_DESCRIPTOR_SCHEMA_PATH)
 
 module.exports.validateBundleDescriptorFile = _addPath(_validateBundleDescriptorFile)
 module.exports.validatePluginDescriptorFile = _addPath(_validatePluginDescriptorFile)
@@ -96,7 +100,8 @@ module.exports.validateCmsassetDescriptorFile = _addPath(_validateCmsassetDescri
 module.exports.validateContenttemplateDescriptorFile = _addPath(_validateContenttemplateDescriptorFile)
 module.exports.validateContenttypeDescriptorFile = _addPath(_validateContenttypeDescriptorFile)
 module.exports.validateContentDescriptorFile = _addPath(_validateContentDescriptorFile)
-module.exports.validateCategoryDescriptorFile = _addPath(_validateCategoryDescriptorFile)
+module.exports.validateCategoriesDescriptorFile = _addPath(_validateCategoriesDescriptorFile)
+module.exports.validateGroupsDescriptorFile = _addPath(_validateGroupsDescriptorFile)
 
 
 

@@ -1,0 +1,4 @@
+- code:
+    required: true
+  name:
+    required: true

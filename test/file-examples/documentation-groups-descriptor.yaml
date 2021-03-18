@@ -1,0 +1,4 @@
+- code: my_group # Identifies the group
+  name: "My group" # The name of the group
+- code: my_group2 # Identifies the group
+  name: "My group2" # The name of the group
