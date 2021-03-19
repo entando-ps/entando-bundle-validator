@@ -12,7 +12,9 @@ const {
   validateCategoriesDescriptorFile,
   validateGroupsDescriptorFile,
   validateLabelsDescriptorFile,
-} = require('../src/index')
+  validateLanguagesDescriptorFile,
+  validateType
+} = require('../src/file-validator')
 test('check documentation-bundle-descriptor.yaml', () => {
   const {path, errors} = validateBundleDescriptorFile('test/file-examples/documentation-bundle-descriptor.yaml');
   expect(path).toBe('test/file-examples/documentation-bundle-descriptor.yaml')
@@ -89,3 +91,89 @@ test('check documentation-labels-descriptor.yaml', () => {
   expect(path).toBe('test/file-examples/documentation-labels-descriptor.yaml')
   expect(errors).toHaveLength(0)
 })
+test('check documentation-languages-descriptor.yaml', () => {
+  const {path, errors} = validateLanguagesDescriptorFile('test/file-examples/documentation-languages-descriptor.yaml');
+  expect(path).toBe('test/file-examples/documentation-languages-descriptor.yaml')
+  expect(errors).toHaveLength(0)
+})
+
+
+//=====================validate types
+
+test('check bundle', () => {
+  const {path, errors} = validateType('Bundle','test/file-examples/documentation-bundle-descriptor.yaml');
+  expect(path).toBe('test/file-examples/documentation-bundle-descriptor.yaml')
+  expect(errors).toHaveLength(0)
+})
+
+test('check plugin', () => {
+  const {path, errors} = validateType('Plugin','test/file-examples/documentation-plugin-descriptor.yaml');
+  expect(path).toBe('test/file-examples/documentation-plugin-descriptor.yaml')
+  expect(errors).toHaveLength(0)
+})
+test('check widget', () => {
+  const {path, errors} = validateType('Widget', 'test/file-examples/documentation-widget-descriptor.yaml');
+  expect(path).toBe('test/file-examples/documentation-widget-descriptor.yaml')
+  expect(errors).toHaveLength(0)
+})
+
+test('check fragment', () => {
+  const {path, errors} = validateType('Fragment','test/file-examples/documentation-fragment-descriptor.yaml');
+  expect(path).toBe('test/file-examples/documentation-fragment-descriptor.yaml')
+  expect(errors).toHaveLength(0)
+})
+
+test('check pagetemplate', () => {
+  const {path, errors} = validateType('Pagetemplate','test/file-examples/documentation-pagetemplate-descriptor.yaml');
+  expect(path).toBe('test/file-examples/documentation-pagetemplate-descriptor.yaml')
+  expect(errors).toHaveLength(0)
+})
+test('check page', () => {
+  const {path, errors} = validateType('Page','test/file-examples/documentation-page-descriptor.yaml');
+  expect(path).toBe('test/file-examples/documentation-page-descriptor.yaml')
+  expect(errors).toHaveLength(0)
+})
+test('check cmsasset', () => {
+  const {path, errors} = validateType('Cmsasset','test/file-examples/documentation-cmsasset-descriptor.yaml');
+  expect(path).toBe('test/file-examples/documentation-cmsasset-descriptor.yaml')
+  expect(errors).toHaveLength(0)
+})
+
+test('check contenttemplate', () => {
+  const {path, errors} = validateType('Contenttemplate','test/file-examples/documentation-contenttemplate-descriptor.yaml');
+  expect(path).toBe('test/file-examples/documentation-contenttemplate-descriptor.yaml')
+  expect(errors).toHaveLength(0)
+})
+test('check contenttype', () => {
+  const {path, errors} = validateType('Contenttype','test/file-examples/documentation-contenttype-descriptor.yaml');
+  expect(path).toBe('test/file-examples/documentation-contenttype-descriptor.yaml')
+  expect(errors).toHaveLength(0)
+})
+test('check content', () => {
+  const {path, errors} = validateType('Content','test/file-examples/documentation-content-descriptor.yaml');
+  expect(path).toBe('test/file-examples/documentation-content-descriptor.yaml')
+  expect(errors).toHaveLength(0)
+})
+test('check categories', () => {
+  const {path, errors} = validateType('Categories', 'test/file-examples/documentation-categories-descriptor.yaml');
+  expect(path).toBe('test/file-examples/documentation-categories-descriptor.yaml')
+  expect(errors).toHaveLength(0)
+})
+test('check groups', () => {
+  const {path, errors} = validateType('Groups', 'test/file-examples/documentation-groups-descriptor.yaml');
+  expect(path).toBe('test/file-examples/documentation-groups-descriptor.yaml')
+  expect(errors).toHaveLength(0)
+})
+test('check labels', () => {
+  const {path, errors} = validateType('Labels', 'test/file-examples/documentation-labels-descriptor.yaml');
+  expect(path).toBe('test/file-examples/documentation-labels-descriptor.yaml')
+  expect(errors).toHaveLength(0)
+})
+test('check languages', () => {
+  const {path, errors} = validateType('Languages','test/file-examples/documentation-languages-descriptor.yaml');
+  expect(path).toBe('test/file-examples/documentation-languages-descriptor.yaml')
+  expect(errors).toHaveLength(0)
+})
+
+
+

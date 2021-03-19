@@ -16,6 +16,9 @@
     "chalk": "^2.4.1",
     "commander": "^2.16.0",
     "js-yaml": "^3.12.0",
+    "lodash": "^4.17.21",
+    "lodash.topairs": "^4.3.0",
+    "rxjs": "^6.6.6",
     "validate": "^4.4.1"
   }
 }

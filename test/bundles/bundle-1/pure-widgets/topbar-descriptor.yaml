@@ -1,0 +1,6 @@
+code: codemotion_topbar
+titles:
+  en: Codemotion Topbar
+  it: Codemotion Topbar
+group: free
+customUiPath: topbar.ftl

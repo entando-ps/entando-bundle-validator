@@ -1,0 +1,6 @@
+code: codemotion_sidebar
+titles:
+  en: Codemotion Sidebar
+  it: Codemotion Sidebar
+group: free
+customUiPath: sidebar.ftl

@@ -17,7 +17,7 @@ configuration:
           description:
             required: true
           mainFrame:
-            required: true
+            required: false
           sketch:
             required: true
             x1:

@@ -1,0 +1,17 @@
+code: codemotion-example-bundle
+description: Codemotion Example Bundle
+components:
+  plugins:
+    - plugins/codemotion-bff-plugin.yaml
+  fragments:
+    - fragments/import-map-ux-fragment.yaml
+    - fragments/css-ux-fragment.yaml
+    - fragments/js-ux-fragment.yaml
+  pageModels:
+    - page-models/codemotion-page-template.yaml
+  widgets:
+    - ui/widgets/codemotion/card-widget/card-widget-descriptor.yaml
+    - pure-widgets/copyright-descriptor.yaml
+    - pure-widgets/graphrow-descriptor.yaml
+    - pure-widgets/sidebar-descriptor.yaml
+    - pure-widgets/topbar-descriptor.yaml

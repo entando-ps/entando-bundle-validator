@@ -1,0 +1,6 @@
+image: germanogiudici/codemotion-bff:0.0.1-SNAPSHOT
+dbms: none
+healthCheckPath: '/management/health'
+roles:
+  - 'codemotion-bff-admin'
+  - 'ui-admin'

@@ -1,0 +1,6 @@
+code: codemotion-card-widget
+titles:
+  en: Codemotion Card Widget
+  it: Codemotion Card Widget
+group: free
+customUiPath: card-widget.ftl
