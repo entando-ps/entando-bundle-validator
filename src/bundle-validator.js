@@ -24,6 +24,7 @@ const _checkValidationErrors$ = mergeMap((validationResult) => {
  */
 const _validate$ = (type, bundleFolderPath, filePath) => {
     const completeFilePath = bundleFolderPath + '/' + filePath;
+    console.log(`validating: ${type} ${bundleFolderPath} ${filePath}`)
     const relativeFilePathFolder = filePath.substr(0, filePath.lastIndexOf('/'))
     let stream = of(validateType(type, completeFilePath))
     stream = stream.pipe(_checkValidationErrors$)
