@@ -1,24 +1,57 @@
 {
-  "name": "entando-bundle-validator",
+  "name": "@entando/entando-bundle-validator",
   "version": "1.0.0",
-  "description": "",
-  "main": "./src/index.js",
+  "license": "LGPL-3.0",
+  "description": "Validator for Entando Bundles",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/entando-ps/entando-bundle-validator"
+  },
+  "homepage": "https://www.entando.com",
+  "author": {
+    "name": "Entando Inc.",
+    "email": "info@entando.com"
+  },
+  "main": "./lib/index.js",
+  "bin": {
+    "entando-bundle-validator": "./bin/index.js"
+  },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node ./bin/index.js",
+    "generate": "node ./bin/index.js generate --dry-run",
+    "lint": "eslint ."
   },
-  "keywords": [],
-  "author": "Germano Giudici",
-  "license": "ISC",
-  "devDependencies": {
-    "jest": "^26.6.3"
-  },
+  "keywords": [
+    "entando",
+    "ecr",
+    "repository",
+    "component",
+    "bundle"
+  ],
   "dependencies": {
     "chalk": "^2.4.1",
-    "commander": "^2.16.0",
+    "commander": "^7.1.0",
     "js-yaml": "^3.12.0",
     "lodash": "^4.17.21",
     "lodash.topairs": "^4.3.0",
     "rxjs": "^6.6.6",
     "validate": "^4.4.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "readme": "README.md",
+  "bugs": {
+    "url": "github.com/entando-ps/entando-bundle-validator/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "husky": "^5.1.3"
   }
 }

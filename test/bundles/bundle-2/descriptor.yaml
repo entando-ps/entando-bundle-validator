@@ -1,0 +1,10 @@
+code: single-spa-react-widget-bundle
+description: Single Spa React Widget Bundle
+components:
+  fragments:
+    - fragments/import-map-ux-fragment.yaml
+  widgets:
+    - ui/widgets/recipes/single-spa-react-widget/single-spa-react-widget-descriptor.yaml
+    - ui/widgets/recipes/single-spa-react-router-widget/single-spa-react-router-widget-descriptor.yaml
+# entando-needle-descriptor-add-widgets - Entando blueprint will add widget bundle files here
+

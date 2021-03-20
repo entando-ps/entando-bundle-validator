@@ -1,0 +1,6 @@
+code: single-spa-react-widget
+titles:
+  en: Single Spa React Widget
+  it: Single Spa React Widget
+group: free
+customUiPath: single-spa-react-widget.ftl

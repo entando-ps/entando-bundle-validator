@@ -14,7 +14,7 @@ const {
   validateLabelsDescriptorFile,
   validateLanguagesDescriptorFile,
   validateType
-} = require('../src/file-validator')
+} = require('../lib/file-validator')
 test('check documentation-bundle-descriptor.yaml', () => {
   const {path, errors} = validateBundleDescriptorFile('test/file-examples/documentation-bundle-descriptor.yaml');
   expect(path).toBe('test/file-examples/documentation-bundle-descriptor.yaml')
