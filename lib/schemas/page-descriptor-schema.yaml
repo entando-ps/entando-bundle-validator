@@ -8,7 +8,7 @@ titles:
         required: true
     it:
         type: string
-        required: true
+        required: false
 pageModel:
     required: true
 ownerGroup:

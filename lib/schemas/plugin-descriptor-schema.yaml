@@ -16,6 +16,8 @@ healthCheckPath:
     required: true
 ingressPath:
     type: string
+securityLevel:
+    type: string
 permissions:
     - clientId:
         type: string

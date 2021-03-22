@@ -17,7 +17,7 @@ components:
     pageModels:
         - type: string
 
-    page:
+    pages:
         - type: string
 
     assets:

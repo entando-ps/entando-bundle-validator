@@ -22,3 +22,15 @@ test('check bundle-2', () => {
             }
         )
 })
+
+test('check process-driven-plugin', () => {
+    const whereIsMyBundle = 'test/bundles/process-driven-plugin';
+    validate$(whereIsMyBundle)
+        .subscribe(x => {
+                console.log(x)
+            }, e => {
+                fail(e)
+
+            }
+        )
+})
