@@ -7,15 +7,20 @@ name:
     required: true
 status:
     required: true
-    type: number
 
 attributes:
     - code:
         required: true
+      name:
+        required: false
       type:
         required: true
-      name:
+      names:
         required: true
+        en:
+            required: false
+        it:
+            required: false
       roles:
           - code:
                 required: true
@@ -91,3 +96,105 @@ attributes:
                   type: string
               ognlExpression:
                   type: string
+      nestedAttribute:
+          code:
+            type: string
+          type:
+              type: string
+          name:
+              type: string
+          names:
+              en:
+                  type: string
+          roles:
+              - type: string
+          disablingCodes:
+              - type: string
+          mandatory:
+              type: boolean
+          listFilter:
+              type: boolean
+          indexable:
+              type: boolean
+          enumeratorStaticItems:
+              type: string
+          enumeratorStaticItemsSeparator:
+              type: string
+          enumeratorExtractorBean:
+              type: string
+          validationRules:
+              minLength:
+              maxLength:
+              regex:
+              rangeStartString:
+              rangeEndString:
+              rangeStartStringAttribute:
+              rangeEndStringAttribute:
+              equalString:
+              equalStringAttribute:
+              rangeStartDate:
+              rangeEndDate:
+              rangeStartDateAttribute:
+              rangeEndDateAttribute:
+              equalDate:
+              equalDateAttribute:
+              rangeStartNumber:
+              rangeStartNumberAttribute:
+              rangeEndNumber:
+              rangeEndNumberAttribute:
+              equalNumber:
+              equalNumberAttribute:
+              ognlValidation:
+          nestedAttribute:
+          compositeAttributes:
+          - code:
+                type: string
+            type:
+                type: string
+            name:
+                type: string
+            names:
+                en:
+                    type: string
+            roles:
+                - type: string
+            disablingCodes:
+                - type: string
+            mandatory:
+                type: boolean
+            listFilter:
+                type: boolean
+            indexable:
+                type: boolean
+            enumeratorStaticItems:
+                type: string
+            enumeratorStaticItemsSeparator:
+                type: string
+            enumeratorExtractorBean:
+            validationRules:
+                minLength:
+                maxLength:
+                regex:
+                rangeStartString:
+                rangeEndString:
+                rangeStartStringAttribute:
+                rangeEndStringAttribute:
+                equalString:
+                equalStringAttribute:
+                rangeStartDate:
+                rangeEndDate:
+                rangeStartDateAttribute:
+                rangeEndDateAttribute:
+                equalDate:
+                equalDateAttribute:
+                rangeStartNumber:
+                rangeStartNumberAttribute:
+                rangeEndNumber:
+                rangeEndNumberAttribute:
+                equalNumber:
+                equalNumberAttribute:
+                ognlValidation:
+            nestedAttribute:
+            compositeAttributes:
+
+

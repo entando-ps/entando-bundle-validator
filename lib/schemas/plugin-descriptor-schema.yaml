@@ -1,3 +1,5 @@
+name:
+    required: false
 image:
     type: string
     required: true

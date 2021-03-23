@@ -5,10 +5,10 @@ description:
 titles:
     en:
         type: string
-        required: true
+        required: false
     it:
         type: string
-        required: true
+        required: false
 configuration:
     required: true
     frames:
@@ -33,6 +33,8 @@ configuration:
                 type: number
           defaultWidget:
               code:
+                  type: string
+              properties:
                   type: string
 
 templatePath:

@@ -9,10 +9,30 @@ description:
     required: true
 mainGroup:
     required: true
+groups:
+    - type: string
 status:
     required: true
 attributes:
     - code:
         required: true
+      value:
+        required: false
+        urlDest:
+            required: false
+        pageDest:
+            required: false
+        contentDest:
+            required: false
+        resourceDest:
+            required: false
+        symbolicDestination:
+            required: false
+        destType:
+            required: false
       values:
         required: false
+      compositeelements:
+          - required: false
+      listelements:
+          required: false

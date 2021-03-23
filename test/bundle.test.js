@@ -34,3 +34,15 @@ test('check process-driven-plugin', () => {
             }
         )
 })
+
+test('check standard-demo', () => {
+    const whereIsMyBundle = 'test/bundles/standard-demo';
+    validate$(whereIsMyBundle)
+        .subscribe(x => {
+                console.log(x)
+            }, e => {
+                fail(e)
+
+            }
+        )
+})

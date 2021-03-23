@@ -1,2 +1,4 @@
 - code:
     required: true
+  description:
+    required: false
